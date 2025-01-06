@@ -1,0 +1,358 @@
+16 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 188777542, SPIWP:0xee
+clk_drv:0x00,q_drv:0xets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 188777542, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (28) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (28) boot: compile time Jan  7 2025 01:05:41[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v1.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot:  3 storage1         Unknown data     01 82 00110000 00020000[0m
+[0;32mI (84) boot:  4 storage2         Unknown data     01 82 00130000 00050000[0m
+[0;32mI (90) boot:  5 storage3         Unknown data     01 82 00180000 00080000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (100) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0da48h ( 55880) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0001da70 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0001da94 vaddr=3ffb0000 size=0257ch (  9596) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00020018 vaddr=40080000 size=10000h ( 65536) load[0m
+[0;32mI (164) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=27748h (161608) map[0m
+[0;32mI (219) esp_image: segment 5: paddr=00057770 vaddr=40090000 size=00144h (   324) load[0m
+[0;32mI (227) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (228) boot: Disabling RNG early entropy source...[0m
+[0;32mI (240) cpu_start: Multicore app[0m
+[0;32mI (248) cpu_start: Pro cpu start user code[0m
+[0;32mI (248) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (248) app_init: Application information:[0m
+[0;32mI (248) app_init: Project name:     m5stckC-Plus[0m
+[0;32mI (252) app_init: App version:      60d60b4[0m
+[0;32mI (256) app_init: Compile time:     Jan  7 2025 01:05:35[0m
+[0;32mI (261) app_init: ELF file SHA256:  25dadf1d4...[0m
+[0;32mI (266) app_init: ESP-IDF:          v5.5-dev-1050-gb5ac4fbdf9[0m
+[0;32mI (271) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (275) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (279) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (283) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (289) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (294) heap_init: At 3FFB3670 len 0002C990 (178 KiB): DRAM[0m
+[0;32mI (299) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (305) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (310) heap_init: At 40090144 len 0000FEBC (63 KiB): IRAM[0m
+[0;32mI (317) spi_flash: detected chip: gd[0m
+[0;32mI (319) spi_flash: flash io: dio[0m
+[0;33mW (322) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (334) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (344) main_task: Started on CPU0[0m
+[0;32mI (354) main_task: Calling app_main()[0m
+[0;32mI (354) MAIN: Initializing SPIFFS[0m
+[0;32mI (354) MAIN: Mount /fonts to storage1 success[0m
+[0;32mI (354) MAIN: Partition size: total: 113201, used: 95631[0m
+[0;32mI (364) listSPIFFS: d_name=ILMH16XB.FNT d_ino=0 d_type=1[0m
+[0;32mI (364) listSPIFFS: d_name=ILGH24XB.FNT d_ino=0 d_type=1[0m
+[0;32mI (364) listSPIFFS: d_name=Scroll-o-Sprites.fnt d_ino=0 d_type=1[0m
+[0;32mI (374) listSPIFFS: d_name=emoticons21.fnt d_ino=0 d_type=1[0m
+[0;32mI (374) listSPIFFS: d_name=ILGH16XB.FNT d_ino=0 d_type=1[0m
+[0;32mI (384) listSPIFFS: d_name=ILMH32XB.FNT d_ino=0 d_type=1[0m
+[0;32mI (384) listSPIFFS: d_name=ILMH24XB.FNT d_ino=0 d_type=1[0m
+[0;32mI (394) listSPIFFS: d_name=ILGH32XB.FNT d_ino=0 d_type=1[0m
+[0;32mI (414) MAIN: Mount /images to storage2 success[0m
+[0;32mI (414) MAIN: Partition size: total: 293921, used: 182728[0m
+[0;32mI (414) listSPIFFS: d_name=esp_logo.png d_ino=0 d_type=1[0m
+[0;32mI (424) listSPIFFS: d_name=image.bmp d_ino=0 d_type=1[0m
+[0;32mI (424) listSPIFFS: d_name=esp32_135.bmp d_ino=0 d_type=1[0m
+[0;32mI (434) listSPIFFS: d_name=esp32.jpeg d_ino=0 d_type=1[0m
+[0;32mI (464) MAIN: Mount /icons to storage3 success[0m
+[0;32mI (464) MAIN: Partition size: total: 474641, used: 22339[0m
+[0;32mI (464) listSPIFFS: d_name=whatsapp.png d_ino=0 d_type=1[0m
+[0;32mI (464) listSPIFFS: d_name=facebook.png d_ino=0 d_type=1[0m
+[0;32mI (474) listSPIFFS: d_name=instagram.png d_ino=0 d_type=1[0m
+[0;32mI (474) listSPIFFS: d_name=twitter.png d_ino=0 d_type=1[0m
+[0;32mI (484) listSPIFFS: d_name=youtube.png d_ino=0 d_type=1[0m
+[0;32mI (484) listSPIFFS: d_name=linkedin.png d_ino=0 d_type=1[0m
+[0;32mI (494) listSPIFFS: d_name=vkontakte.png d_ino=0 d_type=1[0m
+[0;32mI (494) listSPIFFS: d_name=git.png d_ino=0 d_type=1[0m
+[0;32mI (514) AXP192: data(0x12)=4f[0m
+[0;32mI (514) AXP192: data(0x12)=4f[0m
+[0;32mI (514) AXP192: data(0x31)=4[0m
+[0;32mI (514) AXP192: data(0x31)=4[0m
+[0;32mI (514) ST7789: GPIO_CS=5[0m
+[0;32mI (514) gpio: GPIO[5]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (524) ST7789: GPIO_DC=23[0m
+[0;32mI (524) gpio: GPIO[23]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (534) ST7789: GPIO_RESET=18[0m
+[0;32mI (544) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (544) main_task: Returned from app_main()[0m
+[0;32mI (694) ST7789: GPIO_BL=-1[0m
+[0;32mI (694) ST7789: GPIO_MOSI=15[0m
+[0;32mI (694) ST7789: GPIO_SCLK=13[0m
+[0;32mI (1394) ST7789: heap_caps_malloc success. Frame buffer is available.[0m
+[0;32mI (2424) FillTest: elapsed time[ms]:1030[0m
+[0;32mI (6474) ColorBarTest: elapsed time[ms]:50[0m
+[0;32mI (10504) ArrowTest: elapsed time[ms]:30[0m
+[0;32mI (14534) LineTest: elapsed time[ms]:30[0m
+[0;32mI (18564) CircleTest: elapsed time[ms]:30[0m
+[0;32mI (22594) RoundRectTest: elapsed time[ms]:30[0m
+[0;32mI (26624) DirectionTest: elapsed time[ms]:30[0m
+[0;32mI (30664) HorizontalTest: elapsed time[ms]:40[0m
+[0;32mI (34704) VerticalTest: elapsed time[ms]:40[0m
+[0;32mI (38734) FillRectTest: elapsed time[ms]:30[0m
+[0;32mI (42764) ColorTest: elapsed time[ms]:30[0m
+[0;32mI (47904) BMPTest: elapsed time[ms]:1140[0m
+[0;32mI (52014) JPEGTest: decode_image err=0 imageWidth=120 imageHeight=120[0m
+[0;32mI (53244) JPEGTest: elapsed time[ms]:1340[0m
+[0;32mI (59104) PNGTest: elapsed time[ms]:1860[0m
+[0;32mI (63864) IconTest: elapsed time[ms]:760[0m
+[0;32mI (68634) IconTest: elapsed time[ms]:770[0m
+[0;32mI (72674) CodeTest: elapsed time[ms]:40[0m
+[0;32mI (76714) CodeTest: elapsed time[ms]:40[0m
+[0;32mI (85794) FillTest: elapsed time[ms]:1030[0m
+[0;32mI (89844) ColorBarTest: elapsed time[ms]:50[0m
+[0;32mI (93874) ArrowTest: elapsed time[ms]:30[0m
+[0;32mI (97904) LineTest: elapsed time[ms]:30[0m
+[0;32mI (101934) CircleTest: elapsed time[ms]:30[0m
+[0;32mI (105964) RoundRectTest: elapsed time[ms]:30[0m
+[0;32mI (109994) DirectionTest: elapsed time[ms]:30[0m
+[0;32mI (114034) HorizontalTest: elapsed time[ms]:40[0m
+[0;32mI (118074) VerticalTest: elapsed time[ms]:40[0m
+[0;32mI (122104) FillRectTest: elapsed time[ms]:30[0m
+[0;32mI (126134) ColorTest: elapsed time[ms]:30[0m
+[0;32mI (131274) BMPTest: elapsed time[ms]:1140[0m
+[0;32mI (135384) JPEGTest: decode_image err=0 imageWidth=120 imageHeight=120[0m
+[0;32mI (136614) JPEGTest: elapsed time[ms]:1340[0m
+[0;32mI (142474) PNGTest: elapsed time[ms]:1860[0m
+[0;32mI (147234) IconTest: elapsed time[ms]:760[0m
+[0;32mI (152004) IconTest: elapsed time[ms]:770[0m
+[0;32mI (156034) CodeTest: elapsed time[ms]:30[0m
+[0;32mI (160074) CodeTest: elapsed time[ms]:40[0m
+[0;32mI (169144) FillTest: elapsed time[ms]:1030[0m
+[0;32mI (173194) ColorBarTest: elapsed time[ms]:50[0m
+[0;32mI (177224) ArrowTest: elapsed time[ms]:30[0m
+[0;32mI (181254) LineTest: elapsed time[ms]:30[0m
+[0;32mI (185284) CircleTest: elapsed time[ms]:30[0m
+[0;32mI (189314) RoundRectTest: elapsed time[ms]:30[0m
+[0;32mI (193344) DirectionTest: elapsed time[ms]:30[0m
+[0;32mI (197384) HorizontalTest: elapsed time[ms]:40[0m
+[0;32mI (201424) VerticalTest: elapsed time[ms]:40[0m
+[0;32mI (205454) FillRectTest: elapsed time[ms]:30[0m
+[0;32mI (209484) ColorTest: elapsed time[ms]:30[0m
+[0;32mI (214624) BMPTest: elapsed time[ms]:1140[0m
+[0;32mI (218734) JPEGTest: decode_image err=0 imageWidth=120 imageHeight=120[0m
+[0;32mI (219964) JPEGTest: elapsed time[ms]:1340[0m
+[0;32mI (225824) PNGTest: elapsed time[ms]:1860[0m
+[0;32mI (230584) IconTest: elapsed time[ms]:760[0m
+[0;32mI (235354) IconTest: elapsed time[ms]:770[0m
+[0;32mI (239384) CodeTest: elapsed time[ms]:30[0m
+[0;32mI (243424) CodeTest: elapsed time[ms]:40[0m
+[0;32mI (252494) FillTest: elapsed time[ms]:1030[0m
+[0;32mI (256544) ColorBarTest: elapsed time[ms]:50[0m
+[0;32mI (260574) ArrowTest: elapsed time[ms]:30[0m
+[0;32mI (264604) LineTest: elapsed time[ms]:30[0m
+[0;32mI (268634) CircleTest: elapsed time[ms]:30[0m
+[0;32mI (272664) RoundRectTest: elapsed time[ms]:30[0m
+[0;32mI (276694) DirectionTest: elapsed time[ms]:30[0m
+[0;32mI (280734) HorizontalTest: elapsed time[ms]:40[0m
+[0;32mI (284774) VerticalTest: elapsed time[ms]:40[0m
+[0;32mI (288804) FillRectTest: elapsed time[ms]:30[0m
+[0;32mI (292834) ColorTest: elapsed time[ms]:30[0m
+[0;32mI (297974) BMPTest: elapsed time[ms]:1140[0m
+[0;32mI (302084) JPEGTest: decode_image err=0 imageWidth=120 imageHeight=120[0m
+[0;32mI (303314) JPEGTest: elapsed time[ms]:1340[0m
+[0;32mI (309174) PNGTest: elapsed time[ms]:1860[0m
+[0;32mI (313934) IconTest: elapsed time[ms]:760[0m
+[0;32mI (318704) IconTest: elapsed time[ms]:770[0m
+[0;32mI (322734) CodeTest: elapsed time[ms]:30[0m
+[0;32mI (326774) CodeTest: elapsed time[ms]:40[0m
+[0;32mI (335844) FillTest: elapsed time[ms]:1030[0m
+[0;32mI (339894) ColorBarTest: elapsed time[ms]:50[0m
+[0;32mI (343924) ArrowTest: elapsed time[ms]:30[0m
+[0;32mI (347954) LineTest: elapsed time[ms]:30[0m
+[0;32mI (351984) CircleTest: elapsed time[ms]:30[0m
+[0;32mI (356014) RoundRectTest: elapsed time[ms]:30[0m
+[0;32mI (360044) DirectionTest: elapsed time[ms]:30[0m
+[0;32mI (364084) HorizontalTest: elapsed time[ms]:40[0m
+[0;32mI (368124) VerticalTest: elapsed time[ms]:40[0m
+[0;32mI (372154) FillRectTest: elapsed time[ms]:30[0m
+[0;32mI (376184) ColorTest: elapsed time[ms]:30[0m
+[0;32mI (381324) BMPTest: elapsed time[ms]:1140[0m
+[0;32mI (385434) JPEGTest: decode_image err=0 imageWidth=120 imageHeight=120[0m
+[0;32mI (386664) JPEGTest: elapsed time[ms]:1340[0m
+[0;32mI (392524) PNGTest: elapsed time[ms]:1860[0m
+[0;32mI (397284) IconTest: elapsed time[ms]:760[0m
+[0;32mI (402054) IconTest: elapsed time[ms]:770[0m
+[0;32mI (406084) CodeTest: elapsed time[ms]:30[0m
+[0;32mI (410124) CodeTest: elapsed time[ms]:40[0m
+[0;32mI (419194) FillTest: elapsed time[ms]:1030[0m
+[0;32mI (423244) ColorBarTest: elapsed time[ms]:50[0m
+[0;32mI (427274) ArrowTest: elapsed time[ms]:30[0m
+[0;32mI (431304) LineTest: elapsed time[ms]:30[0m
+[0;32mI (435334) CircleTest: elapsed time[ms]:30[0m
+[0;32mI (439364) RoundRectTest: elapsed time[ms]:30[0m
+[0;32mI (443394) DirectionTest: elapsed time[ms]:30[0m
+[0;32mI (447434) HorizontalTest: elapsed time[ms]:40[0m
+[0;32mI (451474) VerticalTest: elapsed time[ms]:40[0m
+[0;32mI (455504) FillRectTest: elapsed time[ms]:30[0m
+[0;32mI (459534) ColorTest: elapsed time[ms]:30[0m
+[0;32mI (464674) BMPTest: elapsed time[ms]:1140[0m
+[0;32mI (468784) JPEGTest: decode_image err=0 imageWidth=120 imageHeight=120[0m
+[0;32mI (470014) JPEGTest: elapsed time[ms]:1340[0m
+[0;32mI (475874) PNGTest: elapsed time[ms]:1860[0m
+[0;32mI (480634) IconTest: elapsed time[ms]:760[0m
+[0;32mI (485404) IconTest: elapsed time[ms]:770[0m
+[0;32mI (489434) CodeTest: elapsed time[ms]:30[0m
+[0;32mI (493474) CodeTest: elapsed time[ms]:40[0m
+[0;32mI (502544) FillTest: elapsed time[ms]:1030[0m
+[0;32mI (506594) ColorBarTest: elapsed time[ms]:50[0m
+[0;32mI (510624) ArrowTest: elapsed time[ms]:30[0m
+[0;32mI (514654) LineTest: elapsed time[ms]:30[0m
+[0;32mI (518684) CircleTest: elapsed time[ms]:30[0m
+[0;32mI (522714) RoundRectTest: elapsed time[ms]:30[0m
+[0;32mI (526744) DirectionTest: elapsed time[ms]:30[0m
+[0;32mI (530784) HorizontalTest: elapsed time[ms]:40[0m
+[0;32mI (534824) VerticalTest: elapsed time[ms]:40[0m
+[0;32mI (538854) FillRectTest: elapsed time[ms]:30[0m
+[0;32mI (542884) ColorTest: elapsed time[ms]:30[0m
+[0;32mI (548024) BMPTest: elapsed time[ms]:1140[0m
+[0;32mI (552134) JPEGTest: decode_image err=0 imageWidth=120 imageHeight=120[0m
+[0;32mI (553364) JPEGTest: elapsed time[ms]:1340[0m
+[0;32mI (559224) PNGTest: elapsed time[ms]:1860[0m
+[0;32mI (563984) IconTest: elapsed time[ms]:760[0m
+[0;32mI (568754) IconTest: elapsed time[ms]:770[0m
+[0;32mI (572784) CodeTest: elapsed time[ms]:30[0m
+[0;32mI (576824) CodeTest: elapsed time[ms]:40[0m
+[0;32mI (585894) FillTest: elapsed time[ms]:1030[0m
+[0;32mI (589944) ColorBarTest: elapsed time[ms]:50[0m
+[0;32mI (593974) ArrowTest: elapsed time[ms]:30[0m
+[0;32mI (598004) LineTest: elapsed time[ms]:30[0m
+[0;32mI (602034) CircleTest: elapsed time[ms]:30[0m
+[0;32mI (606064) RoundRectTest: elapsed time[ms]:30[0m
+[0;32mI (610094) DirectionTest: elapsed time[ms]:30[0m
+[0;32mI (614134) HorizontalTest: elapsed time[ms]:40[0m
+[0;32mI (618174) VerticalTest: elapsed time[ms]:40[0m
+[0;32mI (622204) FillRectTest: elapsed time[ms]:30[0m
+[0;32mI (626234) ColorTest: elapsed time[ms]:30[0m
+[0;32mI (631374) BMPTest: elapsed time[ms]:1140[0m
+[0;32mI (635484) JPEGTest: decode_image err=0 imageWidth=120 imageHeight=120[0m
+[0;32mI (636714) JPEGTest: elapsed time[ms]:1340[0m
+[0;32mI (642574) PNGTest: elapsed time[ms]:1860[0m
+[0;32mI (647334) IconTest: elapsed time[ms]:760[0m
+[0;32mI (652104) IconTest: elapsed time[ms]:770[0m
+[0;32mI (656134) CodeTest: elapsed time[ms]:30[0m
+[0;32mI (660174) CodeTest: elapsed time[ms]:40[0m
+[0;32mI (669244) FillTest: elapsed time[ms]:1030[0m
+[0;32mI (673294) ColorBarTest: elapsed time[ms]:50[0m
+[0;32mI (677324) ArrowTest: elapsed time[ms]:30[0m
+[0;32mI (681354) LineTest: elapsed time[ms]:30[0m
+[0;32mI (685384) CircleTest: elapsed time[ms]:30[0m
+[0;32mI (689414) RoundRectTest: elapsed time[ms]:30[0m
+[0;32mI (693444) DirectionTest: elapsed time[ms]:30[0m
+[0;32mI (697484) HorizontalTest: elapsed time[ms]:40[0m
+[0;32mI (701524) VerticalTest: elapsed time[ms]:40[0m
+[0;32mI (705554) FillRectTest: elapsed time[ms]:30[0m
+[0;32mI (709584) ColorTest: elapsed time[ms]:30[0m
+[0;32mI (714724) BMPTest: elapsed time[ms]:1140[0m
+[0;32mI (718834) JPEGTest: decode_image err=0 imageWidth=120 imageHeight=120[0m
+[0;32mI (720064) JPEGTest: elapsed time[ms]:1340[0m
+[0;32mI (725924) PNGTest: elapsed time[ms]:1860[0m
+[0;32mI (730684) IconTest: elapsed time[ms]:760[0m
+[0;32mI (735454) IconTest: elapsed time[ms]:770[0m
+[0;32mI (739484) CodeTest: elapsed time[ms]:30[0m
+[0;32mI (743524) CodeTest: elapsed time[ms]:40[0m
+[0;32mI (752594) FillTest: elapsed time[ms]:1030[0m
+[0;32mI (756644) ColorBarTest: elapsed time[ms]:50[0m
+[0;32mI (760674) ArrowTest: elapsed time[ms]:30[0m
+[0;32mI (764704) LineTest: elapsed time[ms]:30[0m
+[0;32mI (768734) CircleTest: elapsed time[ms]:30[0m
+[0;32mI (772764) RoundRectTest: elapsed time[ms]:30[0m
+[0;32mI (776794) DirectionTest: elapsed time[ms]:30[0m
+[0;32mI (780834) HorizontalTest: elapsed time[ms]:40[0m
+[0;32mI (784874) VerticalTest: elapsed time[ms]:40[0m
+[0;32mI (788904) FillRectTest: elapsed time[ms]:30[0m
+[0;32mI (792934) ColorTest: elapsed time[ms]:30[0m
+[0;32mI (798074) BMPTest: elapsed time[ms]:1140[0m
+[0;32mI (802184) JPEGTest: decode_image err=0 imageWidth=120 imageHeight=120[0m
+[0;32mI (803414) JPEGTest: elapsed time[ms]:1340[0m
+[0;32mI (809274) PNGTest: elapsed time[ms]:1860[0m
+[0;32mI (814034) IconTest: elapsed time[ms]:760[0m
+[0;32mI (818804) IconTest: elapsed time[ms]:770[0m
+[0;32mI (822834) CodeTest: elapsed time[ms]:30[0m
+[0;32mI (826874) CodeTest: elapsed time[ms]:40[0m
+[0;32mI (835944) FillTest: elapsed time[ms]:1030[0m
+[0;32mI (839994) ColorBarTest: elapsed time[ms]:50[0m
+[0;32mI (844024) ArrowTest: elapsed time[ms]:30[0m
+[0;32mI (848054) LineTest: elapsed time[ms]:30[0m
+[0;32mI (852084) CircleTest: elapsed time[ms]:30[0m
+[0;32mI (856114) RoundRectTest: elapsed time[ms]:30[0m
+[0;32mI (860144) DirectionTest: elapsed time[ms]:30[0m
+[0;32mI (864184) HorizontalTest: elapsed time[ms]:40[0m
+[0;32mI (868224) VerticalTest: elapsed time[ms]:40[0m
+[0;32mI (872254) FillRectTest: elapsed time[ms]:30[0m
+[0;32mI (876284) ColorTest: elapsed time[ms]:30[0m
+[0;32mI (881424) BMPTest: elapsed time[ms]:1140[0m
+[0;32mI (885534) JPEGTest: decode_image err=0 imageWidth=120 imageHeight=120[0m
+[0;32mI (886764) JPEGTest: elapsed time[ms]:1340[0m
+[0;32mI (892624) PNGTest: elapsed time[ms]:1860[0m
+[0;32mI (897384) IconTest: elapsed time[ms]:760[0m
+[0;32mI (902154) IconTest: elapsed time[ms]:770[0m
+[0;32mI (906184) CodeTest: elapsed time[ms]:30[0m
+[0;32mI (910224) CodeTest: elapsed time[ms]:40[0m
+[0;32mI (919294) FillTest: elapsed time[ms]:1030[0m
+[0;32mI (923344) ColorBarTest: elapsed time[ms]:50[0m
+[0;32mI (927374) ArrowTest: elapsed time[ms]:30[0m
+[0;32mI (931404) LineTest: elapsed time[ms]:30[0m
+[0;32mI (935434) CircleTest: elapsed time[ms]:30[0m
+[0;32mI (939464) RoundRectTest: elapsed time[ms]:30[0m
+[0;32mI (943494) DirectionTest: elapsed time[ms]:30[0m
+[0;32mI (947534) HorizontalTest: elapsed time[ms]:40[0m
+[0;32mI (951574) VerticalTest: elapsed time[ms]:40[0m
+[0;32mI (955604) FillRectTest: elapsed time[ms]:30[0m
+[0;32mI (959634) ColorTest: elapsed time[ms]:30[0m
+[0;32mI (964774) BMPTest: elapsed time[ms]:1140[0m
+[0;32mI (968884) JPEGTest: decode_image err=0 imageWidth=120 imageHeight=120[0m
+[0;32mI (970114) JPEGTest: elapsed time[ms]:1340[0m
+[0;32mI (975974) PNGTest: elapsed time[ms]:1860[0m
+[0;32mI (980734) IconTest: elapsed time[ms]:760[0m
+[0;32mI (985504) IconTest: elapsed time[ms]:770[0m
+[0;32mI (989534) CodeTest: elapsed time[ms]:30[0m
+[0;32mI (993574) CodeTest: elapsed time[ms]:40[0m
+[0;32mI (1002644) FillTest: elapsed time[ms]:1030[0m
+[0;32mI (1006694) ColorBarTest: elapsed time[ms]:50[0m
+[0;32mI (1010724) ArrowTest: elapsed time[ms]:30[0m
+[0;32mI (1014754) LineTest: elapsed time[ms]:30[0m
+[0;32mI (1018784) CircleTest: elapsed time[ms]:30[0m
+[0;32mI (1022814) RoundRectTest: elapsed time[ms]:30[0m
+[0;32mI (1026844) DirectionTest: elapsed time[ms]:30[0m
+[0;32mI (1030884) HorizontalTest: elapsed time[ms]:40[0m
+[0;32mI (1034924) VerticalTest: elapsed time[ms]:40[0m
+[0;32mI (1038954) FillRectTest: elapsed time[ms]:30[0m
+[0;32mI (1042984) ColorTest: elapsed time[ms]:30[0m
+[0;32mI (1048124) BMPTest: elapsed time[ms]:1140[0m
+[0;32mI (1052234) JPEGTest: decode_image err=0 imageWidth=120 imageHeight=120[0m
+[0;32mI (1053464) JPEGTest: elapsed time[ms]:1340[0m
+[0;32mI (1059324) PNGTest: elapsed time[ms]:1860[0m
+[0;32mI (1064084) IconTest: elapsed time[ms]:760[0m
+[0;32mI (1068854) IconTest: elapsed time[ms]:770[0m
+[0;32mI (1072884) CodeTest: elapsed time[ms]:30[0m
+[0;32mI (1076924) CodeTest: elapsed time[ms]:40[0m
+[0;32mI (1085994) FillTest: elapsed time[ms]:1030[0m
+[0;32mI (1090044) ColorBarTest: elapsed time[ms]:50[0m
+[0;32mI (1094074) ArrowTest: elapsed time[ms]:30[0m
+[0;32mI (1098104) LineTest: elapsed time[ms]:30[0m
+[0;32mI (1102134) CircleTest: elapsed time[ms]:30[0m
+[0;32mI (1106164) RoundRectTest: elapsed time[ms]:30[0m

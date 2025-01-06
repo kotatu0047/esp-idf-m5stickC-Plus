@@ -1,0 +1,72 @@
+[1/13] cd /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build && /home/kotatu/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/kotatu/esp-idf/components/spiffs/spiffsgen.py 0x20000 /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/fonts /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/storage1.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+[2/13] cd /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build && /home/kotatu/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/kotatu/esp-idf/components/spiffs/spiffsgen.py 0x50000 /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/images /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/storage2.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+[3/13] cd /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build && /home/kotatu/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/kotatu/esp-idf/components/spiffs/spiffsgen.py 0x80000 /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/icons /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/storage3.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+[4/13] Performing build step for 'bootloader'
+[1/1] cd /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/bootloader/esp-idf/esptool_py && /home/kotatu/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/kotatu/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/bootloader/bootloader.bin
+Bootloader binary size 0x6600 bytes. 0xa00 bytes (9%) free.
+[5/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+/home/kotatu/repo/esp-idf-m5stickC-Plus/screen/main/main.c: In function 'tft':
+/home/kotatu/repo/esp-idf-m5stickC-Plus/screen/main/main.c:1126:14: warning: unused variable 'file' [-Wunused-variable]
+ 1126 |         char file[32];
+      |              ^~~~
+[6/11] Linking C static library esp-idf/main/libmain.a
+[7/11] Generating ld/sections.ld
+[8/11] Linking CXX executable m5stckC-Plus.elf
+[9/11] Generating binary image from built executable
+esptool.py v4.9.dev3
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/m5stckC-Plus.bin
+[10/11] cd /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/esp-idf/esptool_py && /home/kotatu/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/kotatu/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/partition_table/partition-table.bin /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/m5stckC-Plus.bin
+m5stckC-Plus.bin binary size 0x3d220 bytes. Smallest app partition is 0x100000 bytes. 0xc2de0 bytes (76%) free.
+[10/11] cd /home/kotatu/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/kotatu/esp-idf -D "SERIAL_TOOL=/home/kotatu/.espressif/python_env/idf5.5_py3.10_env/bin/python;;/home/kotatu/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build -P /home/kotatu/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 115200 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 m5stckC-Plus.bin 0x8000 partition_table/partition-table.bin 0x110000 storage1.bin 0x130000 storage2.bin 0x180000 storage3.bin
+esptool.py v4.9.dev3
+Serial port /dev/ttyUSB0
+Connecting.....
+Chip is ESP32-PICO-D4 (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, Embedded Flash, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 4c:75:25:cd:eb:b4
+Uploading stub...
+Running stub...
+Stub running...
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0004dfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x00110000 to 0x0012ffff...
+Flash will be erased from 0x00130000 to 0x0017ffff...
+Flash will be erased from 0x00180000 to 0x001fffff...
+SHA digest in image updated
+Compressed 26112 bytes to 16485...
+Writing at 0x00001000... (50 %)
+Writing at 0x00007571... (100 %)
+Wrote 26112 bytes (16485 compressed) at 0x00001000 in 1.9 seconds (effective 110.4 kbit/s)...
+Hash of data verified.
+Compressed 250400 bytes to 139331...
+Writing at 0x00010000... (11 %)
+Traceback (most recent call last):
+  File "/home/kotatu/.espressif/python_env/idf5.5_py3.10_env/lib/python3.10/site-packages/esptool/__init__.py", line 1331, in _main
+    main()
+  File "/home/kotatu/.espressif/python_env/idf5.5_py3.10_env/lib/python3.10/site-packages/esptool/__init__.py", line 1048, in main
+    operation_func(esp, args)
+  File "/home/kotatu/.espressif/python_env/idf5.5_py3.10_env/lib/python3.10/site-packages/esptool/cmds.py", line 653, in write_flash
+    esp.flash_defl_block(block, seq, timeout=timeout)
+  File "/home/kotatu/.espressif/python_env/idf5.5_py3.10_env/lib/python3.10/site-packages/esptool/loader.py", line 127, in inner
+    return func(*args, **kwargs)
+  File "/home/kotatu/.espressif/python_env/idf5.5_py3.10_env/lib/python3.10/site-packages/esptool/loader.py", line 1161, in flash_defl_block
+    self.check_command(
+  File "/home/kotatu/.espressif/python_env/idf5.5_py3.10_env/lib/python3.10/site-packages/esptool/loader.py", line 506, in check_command
+    val, data = self.command(op, data, chk, timeout=timeout)
+  File "/home/kotatu/.espressif/python_env/idf5.5_py3.10_env/lib/python3.10/site-packages/esptool/loader.py", line 475, in command
+    p = self.read()
+  File "/home/kotatu/.espressif/python_env/idf5.5_py3.10_env/lib/python3.10/site-packages/esptool/loader.py", line 408, in read
+    return next(self._slip_reader)
+StopIteration
+
+A fatal error occurred: The chip stopped responding.
+FAILED: CMakeFiles/flash /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/CMakeFiles/flash 
+cd /home/kotatu/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/kotatu/esp-idf -D "SERIAL_TOOL=/home/kotatu/.espressif/python_env/idf5.5_py3.10_env/bin/python;;/home/kotatu/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build -P /home/kotatu/esp-idf/components/esptool_py/run_serial_tool.cmake
+ninja: build stopped: subcommand failed.

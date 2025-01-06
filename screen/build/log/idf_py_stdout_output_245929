@@ -1,0 +1,90 @@
+[1/13] cd /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build && /home/kotatu/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/kotatu/esp-idf/components/spiffs/spiffsgen.py 0x20000 /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/fonts /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/storage1.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+[2/13] cd /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build && /home/kotatu/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/kotatu/esp-idf/components/spiffs/spiffsgen.py 0x50000 /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/images /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/storage2.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+[3/13] cd /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build && /home/kotatu/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/kotatu/esp-idf/components/spiffs/spiffsgen.py 0x80000 /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/icons /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/storage3.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+[4/13] Performing build step for 'bootloader'
+[1/1] cd /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/bootloader/esp-idf/esptool_py && /home/kotatu/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/kotatu/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/bootloader/bootloader.bin
+Bootloader binary size 0x6600 bytes. 0xa00 bytes (9%) free.
+[5/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+/home/kotatu/repo/esp-idf-m5stickC-Plus/screen/main/main.c: In function 'tft':
+/home/kotatu/repo/esp-idf-m5stickC-Plus/screen/main/main.c:1128:14: warning: unused variable 'file' [-Wunused-variable]
+ 1128 |         char file[32];
+      |              ^~~~
+[6/11] Linking C static library esp-idf/main/libmain.a
+[7/11] Generating ld/sections.ld
+[8/11] Linking CXX executable m5stckC-Plus.elf
+[9/11] Generating binary image from built executable
+esptool.py v4.9.dev3
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/m5stckC-Plus.bin
+[10/11] cd /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/esp-idf/esptool_py && /home/kotatu/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/kotatu/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/partition_table/partition-table.bin /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/m5stckC-Plus.bin
+m5stckC-Plus.bin binary size 0x3d180 bytes. Smallest app partition is 0x100000 bytes. 0xc2e80 bytes (76%) free.
+[10/11] cd /home/kotatu/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/kotatu/esp-idf -D "SERIAL_TOOL=/home/kotatu/.espressif/python_env/idf5.5_py3.10_env/bin/python;;/home/kotatu/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build -P /home/kotatu/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 115200 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 m5stckC-Plus.bin 0x8000 partition_table/partition-table.bin 0x110000 storage1.bin 0x130000 storage2.bin 0x180000 storage3.bin
+esptool.py v4.9.dev3
+Serial port /dev/ttyUSB0
+Connecting.....
+Chip is ESP32-PICO-D4 (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, Embedded Flash, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 4c:75:25:cd:eb:b4
+Uploading stub...
+Running stub...
+Stub running...
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0004dfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x00110000 to 0x0012ffff...
+Flash will be erased from 0x00130000 to 0x0017ffff...
+Flash will be erased from 0x00180000 to 0x001fffff...
+SHA digest in image updated
+Compressed 26112 bytes to 16485...
+Writing at 0x00001000... (50 %)
+Writing at 0x00007571... (100 %)
+Wrote 26112 bytes (16485 compressed) at 0x00001000 in 1.9 seconds (effective 109.4 kbit/s)...
+Hash of data verified.
+Compressed 250240 bytes to 139235...
+Writing at 0x00010000... (11 %)
+Writing at 0x0001c2c8... (22 %)
+Writing at 0x00023e19... (33 %)
+Writing at 0x00029dae... (44 %)
+Writing at 0x0002fabc... (55 %)
+Writing at 0x000363b0... (66 %)
+Writing at 0x0003dee8... (77 %)
+Writing at 0x00043b94... (88 %)
+Writing at 0x0004a159... (100 %)
+Wrote 250240 bytes (139235 compressed) at 0x00010000 in 13.1 seconds (effective 152.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 137...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (137 compressed) at 0x00008000 in 0.1 seconds (effective 385.2 kbit/s)...
+Hash of data verified.
+Compressed 131072 bytes to 21058...
+Writing at 0x00110000... (50 %)
+Writing at 0x00122ee2... (100 %)
+Wrote 131072 bytes (21058 compressed) at 0x00110000 in 2.3 seconds (effective 448.2 kbit/s)...
+Hash of data verified.
+Compressed 327680 bytes to 167548...
+Writing at 0x00130000... (9 %)
+Writing at 0x00134518... (18 %)
+Writing at 0x0013898f... (27 %)
+Writing at 0x0013d662... (36 %)
+Writing at 0x001426fb... (45 %)
+Writing at 0x00147677... (54 %)
+Writing at 0x0014c6cc... (63 %)
+Writing at 0x0015162a... (72 %)
+Writing at 0x001564a7... (81 %)
+Writing at 0x0015b4d4... (90 %)
+Writing at 0x0015fa2b... (100 %)
+Wrote 327680 bytes (167548 compressed) at 0x00130000 in 16.0 seconds (effective 163.8 kbit/s)...
+Hash of data verified.
+Compressed 524288 bytes to 19468...
+Writing at 0x00180000... (50 %)
+Writing at 0x00185614... (100 %)
+Wrote 524288 bytes (19468 compressed) at 0x00180000 in 4.5 seconds (effective 939.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

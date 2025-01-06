@@ -1,0 +1,2 @@
+source /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/gdbinit/symbols
+source /home/kotatu/repo/esp-idf-m5stickC-Plus/screen/build/gdbinit/connect
